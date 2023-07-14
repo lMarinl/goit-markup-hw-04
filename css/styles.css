@@ -227,10 +227,12 @@ background-color: var(--ocean);
 
 }
 .description-container{
+    margin-bottom: 8px;
 }
 .description-list{
     display: flex;
     gap: 24px;
+    
 }
 
 .description-list-item{
@@ -246,7 +248,7 @@ background-color: var(--ocean);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    
 
 }
 
