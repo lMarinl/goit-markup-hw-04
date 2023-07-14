@@ -58,25 +58,17 @@ margin: auto;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.current {
-    position: relative;
-}
-.current::after {
-    content: '';
-    position: absolute;
-    bottom: -24px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--ocean);
-}
+
 /*-------------------------------------main page--------------------------------------*/
 
 /*-----header------------------------------------------------------------------------*/
 .main{
     display: flex;
     border-bottom: 1px solid var(--cornflower);
+    box-shadow:
+    0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .main-container{
@@ -128,6 +120,22 @@ margin: auto;
     color: var(--ocean);
 }
 
+.current {
+    position: relative;
+    color: var(--ocean);
+    ;
+}
+
+.current::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--ocean);
+}
 
 
 .main-contacts {
@@ -167,12 +175,13 @@ margin: auto;
     rgba(46, 47, 66, 0.70)
     ),
     url(../images/people-office.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 188px 0;
 }
 
-.section-one-container{
 
-}
 
 .section-one-title {
     color: var(--white);
@@ -215,7 +224,9 @@ background-color: var(--ocean);
     padding: 120px 0;
 
 }
-
+.description-container{
+margin-bottom: 8px;
+}
 .description-list{
     display: flex;
     gap: 24px;
@@ -281,7 +292,7 @@ background-color: var(--ocean);
 
 /*-----section4--------------------------------------------------------*/
 .team {
-    background-color: #F4F4FD;
+    background-color: var(--cloud);
     padding: 120px 0;
 }
 .team-list{
@@ -292,6 +303,7 @@ background-color: var(--ocean);
 .team-item{
     width: calc((100% - 72px) / 4);
     max-width: 264px;
+
 }
 
 .team-title {
@@ -315,8 +327,8 @@ background-color: var(--ocean);
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.container-team{
-    padding: 32px 16px;
+.social-container-team{
+    padding: 32px 0;
 }
 
 .team-list-title{
@@ -340,18 +352,17 @@ background-color: var(--ocean);
         margin-bottom: 8px;
 }
 
-.team-socials-container {
-
-}
-
 .list-team-socials {
     display: flex;
     gap: 24px;
+    justify-content: center;
+
 }
 
 .team-socials-item {
     width: 40px;
     height: 40px;
+
 }
 
 .team-social-link{
@@ -379,6 +390,8 @@ fill: var(--cloud);
 .customers{
     padding: 120px 0;
 }
+
+
 .customers-title {
     color: var(--navy-blue);
     text-align: center;
@@ -436,6 +449,7 @@ fill: var(--cloud);
 }
 .container-footer{
     display: flex;
+    align-items: baseline;
 }
 .footer-main-logo{
     margin-right: 120px;
@@ -466,11 +480,9 @@ fill: var(--cloud);
         max-width: 264px;
     }
 
-    .container-social-media {
-        
-    }
+
     
-.footer-social-title {
+.footer-social-text {
     color: var(--white);
         font-size: 16px;
         font-weight: 500;
@@ -517,6 +529,10 @@ fill: var(--cloud);
 .portfolio{
     display: flex;
     border-bottom: 1px solid var(--cornflower);
+        box-shadow:
+        0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-container{
@@ -530,9 +546,7 @@ fill: var(--cloud);
     justify-content: center;
 }
 
-.portfolio-list{
 
-}
 .portfolio-link-logo {
     color: var(--iris);
         font-family: Raleway, sans-serif;
@@ -552,6 +566,7 @@ fill: var(--cloud);
 .portfolio-list{
     display: flex;
     gap: 40px;
+    
 }
 
 .portfolio-item{
@@ -570,6 +585,22 @@ fill: var(--cloud);
 .portfolio-link:focus,
 .portfolio-link:active {
     color: var(--ocean);
+}
+.current {
+    position: relative;
+    color: var(--ocean);
+    ;
+}
+
+.current::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--ocean);
 }
 
 .portfolio-contacts {
@@ -609,9 +640,6 @@ fill: var(--cloud);
     margin-bottom: 72px;
 }
 
-.menu-item{
-
-}
 
 .menu-btn {
     background-color: var(--cloud);
@@ -675,33 +703,84 @@ fill: var(--cloud);
 }
 
 /*--------------------------------Footer-------------------------*/
-.footer-pf {
+.footer {
     background-color: var(--navy-blue);
     padding: 100px 0;
 }
 
-.pf-link-logo {
-    color: var(--iris);
-        justify-content: center;
-        font-family: Raleway, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 1.17;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        display: inline-block;
-        margin-bottom: 16px;
+.container-footer {
+    display: flex;
+    align-items: baseline;
 }
 
-.pf-logo-accent {
+.footer-main-logo {
+    margin-right: 120px;
+}
+
+.footer-link-logo {
+    color: var(--iris);
+    justify-content: center;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer-logo-accent {
     color: var(--cloud);
 }
 
-.pf-text {
+.footer-text {
     color: var(--cloud);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
+}
+
+
+
+.footer-social-text {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.footer-social-list {
+    display: flex;
+    gap: 16px;
+}
+
+
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-social-link {
+    background-color: var(--iris);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cloud);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-link:is(:hover, :focus) {
+    background-color: rgba(49, 208, 170, 1);
+}
+
+.footer-socials-icons {
+    fill: currentColor;
 }
