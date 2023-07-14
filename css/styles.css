@@ -6,6 +6,7 @@
     --white:#FFFFFF;
     --ocean:#404BBF;
     --cloud:#F4F4FD;
+    --light-slate: #8E8F99;
 }
 
 body{
@@ -112,6 +113,7 @@ margin: auto;
         line-height: 1.5;
         letter-spacing: 0.02em;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 24px 0;
 }
 
 .main-link:hover,
@@ -225,7 +227,6 @@ background-color: var(--ocean);
 
 }
 .description-container{
-margin-bottom: 8px;
 }
 .description-list{
     display: flex;
@@ -245,6 +246,7 @@ margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 8px;
 
 }
 
@@ -254,7 +256,6 @@ margin-bottom: 8px;
         font-weight: 500;
         line-height: 1.2;
         letter-spacing: 0.02em;
-        margin-bottom: 8px;
 }
 
 .description-text {
@@ -327,7 +328,7 @@ margin-bottom: 8px;
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
-.social-container-team{
+.container-team{
     padding: 32px 0;
 }
 
@@ -362,6 +363,7 @@ margin-bottom: 8px;
 .team-socials-item {
     width: 40px;
     height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -373,7 +375,7 @@ margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .team-social-link:is(:hover, :focus){
@@ -422,18 +424,25 @@ fill: var(--cloud);
 
 
 .customers-link{
-    color: #8E8F99;
-        padding: 16px 32px;
-            border: 1px solid #8E8F99;
-            border-radius: 4px;
-            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    height: 100%;
+    color: var(--light-slate);
+    padding: 16px 32px;
+    border: 1px solid var(--light-slate);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-link:is(:hover, :focus) {
     border-color: var(--ocean);
+    color: var(--ocean);
 }
 .customers-link:is(:hover, :focus) .customers-icons{
     color: var(--ocean);
+    border-color: var(--ocean);
 }
 
 
@@ -579,6 +588,7 @@ fill: var(--cloud);
         line-height: 1.5;
         letter-spacing: 0.02em;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 24px 0;
 }
 
 .portfolio-link:hover,
