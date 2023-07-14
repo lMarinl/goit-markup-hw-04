@@ -227,7 +227,7 @@ background-color: var(--ocean);
 
 }
 .description-container{
-    margin-bottom: 8px;
+    
 }
 .description-list{
     display: flex;
@@ -245,6 +245,7 @@ background-color: var(--ocean);
     background-color: var(--cloud);
     margin-bottom: 24px;
     border-radius: 4px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -664,20 +665,25 @@ fill: var(--cloud);
         line-height: 1.5;
         letter-spacing: 0.04em;
         cursor: pointer;
-        display: flex;
+        display: block;
         border: 1px solid var(--cornflower);
         border-radius: 4px;
         padding: 12px 24px;
         transition:
-            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-btn:hover,
 .menu-btn:focus{
     background-color: var(--ocean);
     color: var(--white);
     border: 1px solid transparent;
+    box-shadow: 
+        0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 2px 1px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-list{
@@ -688,6 +694,31 @@ fill: var(--cloud);
 }
 .gallery-item{
     width: calc((100% - 48px) / 3);
+    
+}
+
+.gallery-link{
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-link:hover, :focus{
+    transform: translateY(0%);
+}
+
+.pf-container-overflow{
+    overflow: hidden;
+    position: relative;
+}
+
+.overflow{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--cloud);
+        max-width: 360px;
+        margin: 0 auto;
+        padding: 40px 32px 164px;
+        background-color: var(--iris);
 }
 
 .text-container{
