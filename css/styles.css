@@ -639,28 +639,27 @@ fill: var(--cloud);
     gap: 24px;
     margin-bottom: 72px;
 }
-.menu-item{
-transition:
-            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .menu-btn {
     background-color: var(--cloud);
     color: var(--iris);
     text-align: center;
-        font-size: 16px;
-        font-family: inherit;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 1.5;
-        letter-spacing: 0.04em;
-        cursor: pointer;
-        border: 1px solid var(--cornflower);
-        border-radius: 4px;
-        padding: 12px 24px;
+    font-size: 16px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border: 1px solid var(--cornflower);
+    border-radius: 4px;
+    padding: 12px 24px;
+    transition:
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-btn:hover,
 .menu-btn:focus{
@@ -687,15 +686,15 @@ transition:
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.gallery-link:hover, :focus{
+.gallery-link:hover, .gallery-link:focus{
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
                 0px 1px 1px rgba(46, 47, 66, 0.16),
                 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
-.gallery-link:hover .verflow{
+.gallery-link:hover .overflow{
     transform: translateY(0%);
 }
-.gallery-link:focus .verflow {
+.gallery-link:focus .overflow {
     transform: translateY(0%);
 }
 
@@ -708,6 +707,7 @@ transition:
 .overflow{
         position: absolute;
         top:0;
+        left: 0;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
@@ -878,7 +878,7 @@ transition:
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
                 border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn-modal:hover, :focus{
+.btn-modal:hover, .btn-modal:hover:focus{
     border: none;
     background-color: #404bbf;
 }
